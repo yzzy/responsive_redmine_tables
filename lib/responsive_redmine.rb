@@ -1,0 +1,1 @@
+require_dependency 'responsive_redmine/hooks/base_layout_hook'

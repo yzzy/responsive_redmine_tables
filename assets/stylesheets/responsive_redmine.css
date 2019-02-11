@@ -1,0 +1,36 @@
+@media screen and (max-width: 899px)
+{
+  tr, td, th, thead, tbody, table {
+    display: block;
+  }
+
+  table {
+    display: flex;
+    overflow: hidden;
+  }
+
+  tr {
+    margin: .2em 0;
+  }
+
+  thead {
+    --cols: 8;
+    --height: calc(1.67em * var(--cols));
+    text-shadow: 0 var(--height),
+                 0 calc(var(--height) * 2),
+                 0 calc(var(--height) * 3),
+                 0 calc(var(--height) * 4),
+                 0 calc(var(--height) * 5),
+                 0 calc(var(--height) * 6),
+                 0 calc(var(--height) * 7),
+                 0 calc(var(--height) * 8);
+  }
+
+  th {
+    text-align: left;
+  }
+
+  td:not(:first-child) {
+    border-top: none;
+  }
+}
