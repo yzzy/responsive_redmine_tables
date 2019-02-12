@@ -1,36 +1,61 @@
-@media screen and (max-width: 899px)
-{
-  tr, td, th, thead, tbody, table {
+@media screen and (max-width: 640px) {
+  .responsive-table thead tr {
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+  }
+  .responsive-table tr {
+    border: 1px solid #0a0a0a;
     display: block;
   }
-
-  table {
+  .responsive-table tr + tr {
+    margin-top: 1.5rem;
+  }
+  .responsive-table td {
+    border: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    overflow: hidden;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #0a0a0a;
+    padding-left: 50%;
+    position: relative;
   }
-
-  tr {
-    margin: .2em 0;
+  .responsive-table td:before {
+    content: attr(data-label);
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-left: -100%;
+    width: 45%;
+    min-width: 100px;
+    position: relative;
+    z-index: 1;
   }
-
-  thead {
-    --cols: 8;
-    --height: calc(1.67em * var(--cols));
-    text-shadow: 0 var(--height),
-                 0 calc(var(--height) * 2),
-                 0 calc(var(--height) * 3),
-                 0 calc(var(--height) * 4),
-                 0 calc(var(--height) * 5),
-                 0 calc(var(--height) * 6),
-                 0 calc(var(--height) * 7),
-                 0 calc(var(--height) * 8);
+  .responsive-table td:after {
+    content: '';
+    position: absolute;
+    background: #9ab4cb;
+    width: 20%;
+    min-width: 100px;
+    height: 95%;
+    left: 1px;
+    top: 1px;
+    z-index: 0;
   }
-
-  th {
+  table.list td {
     text-align: left;
   }
-
-  td:not(:first-child) {
-    border-top: none;
+  table.list td.hide-when-print {
+    display: none;
+  }
+  table.list td.id {
+    width: 100%;
+    text-align: left;
   }
 }
