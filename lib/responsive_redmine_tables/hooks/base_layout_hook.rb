@@ -1,4 +1,4 @@
-module ResponsiveRedmine
+module ResponsiveRedmineTables
   module Hooks
     class BaseLayoutHook < Redmine::Hook::ViewListener
       render_on :view_layouts_base_html_head, partial: 'layouts/base_html_head'
