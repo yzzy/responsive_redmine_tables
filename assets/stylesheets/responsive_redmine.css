@@ -1,4 +1,4 @@
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 899px) {
   .responsive-table thead tr {
     position: absolute;
     top: -9999em;
@@ -48,8 +48,17 @@
   table.list td.hide-when-print {
     display: none;
   }
+  table.list td.buttons {
+    display: none;
+  }
   table.list td.id {
     width: 100%;
     text-align: left;
+  }
+  tr.user td, tr.user td.email, tr.user td.tick {
+    width:inherit;
+  }
+  table.list td.tick {
+    width:inherit;
   }
 }
