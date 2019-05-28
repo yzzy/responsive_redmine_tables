@@ -1,26 +1,27 @@
 @media screen and (max-width: 899px) {
-  .responsive-table thead tr {
+  table.responsive-table thead tr {
     position: absolute;
     top: -9999em;
     left: -9999em;
   }
-  .responsive-table tr {
+  table.responsive-table tr {
     border: 1px solid #0a0a0a;
     display: block;
   }
-  .responsive-table tr + tr {
+  table.responsive-table tr + tr {
     margin-top: 1.5rem;
   }
-  .responsive-table td {
+  table.responsive-table td {
     border: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-align: left;
     border-bottom: 1px solid #0a0a0a;
     padding-left: 50%;
     position: relative;
   }
-  .responsive-table td:before {
+  table.responsive-table td:before {
     content: attr(data-label);
     display: inline-block;
     font-weight: bold;
@@ -31,7 +32,7 @@
     position: relative;
     z-index: 1;
   }
-  .responsive-table td:after {
+  table.responsive-table td:after {
     content: '';
     position: absolute;
     background: #9ab4cb;
@@ -42,23 +43,20 @@
     top: 1px;
     z-index: 0;
   }
-  table.list td {
-    text-align: left;
-  }
-  table.list td.hide-when-print {
+  table.responsive-table td.hide-when-print {
     display: none;
   }
-  table.list td.buttons {
+  table.responsive-table td.buttons {
     display: none;
   }
-  table.list td.id {
+  table.responsive-table td.id {
     width: 100%;
     text-align: left;
   }
-  tr.user td, tr.user td.email, tr.user td.tick {
+  table.responsive-table td.tick {
     width:inherit;
   }
-  table.list td.tick {
+  tr.user td, tr.user td.email, tr.user td.tick {
     width:inherit;
   }
 }

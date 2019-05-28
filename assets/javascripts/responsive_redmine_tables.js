@@ -9,7 +9,7 @@ var responsiveTables = function() {
     });
     $self.find('td').each(function() {
       let dataLabel = dataLabels[$(this).closest('tr').children().index(this)];
-      if (dataLabel.length > 0) {
+      if (dataLabel != null && dataLabel.length > 0) {
         $(this).attr('data-label', dataLabel);
       } else {
         if ($(this).children().length == 0) {
